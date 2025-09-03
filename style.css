@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: 1px solid red;
 }
 body {
   position: relative;
@@ -19,7 +20,7 @@ body {
 
 main {
   display: grid;
-  grid-template-rows: repeat(1fr, 2fr);
+  grid-template-rows: 1fr, 2fr;
 }
 
 img {
@@ -27,7 +28,8 @@ img {
   display: block;
 }
 .profile {
-  transform: scale(1.25);
+  transform: scale(1.25) translateX(1em);
+  height: 280px;
 }
 
 .hero {
@@ -37,13 +39,12 @@ img {
 .hero-container {
   display: flex;
   background-color: rgb(223, 223, 223);
-  height: 280px;
 }
 .about-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2em 2em 2em 4em;
+  margin: 2em 2em 2em 5em;
 }
 .about-heading {
   margin-bottom: 1em;
@@ -53,12 +54,25 @@ p {
   font-size: 1.2rem;
 }
 
-.work {
+.work-section {
   width: 70%;
   margin: auto;
-  /* margin-top: 6em; */
 }
-.work-container {
+.work-heading {
+  margin-bottom: 1em;
+  text-align: center;
+}
+.work-lists {
   display: grid;
-  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+}
+
+.work-item {
+  border: 1px solid #ccc;
+}
+
+.work-title,
+.work-description {
+  padding: 1em;
 }
